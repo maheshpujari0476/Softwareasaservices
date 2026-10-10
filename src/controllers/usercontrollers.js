@@ -35,7 +35,7 @@ export const registerController = async (req, res, next) => {
     const existingUser = await findUserByEmail(email);
     if (existingUser) throw { status: 402, message: "email already exist" };
 
-    const user = await createUser(name, email, password);
+    const user = await creatseUser(name, email, password);
 
     return res
       .status(201)

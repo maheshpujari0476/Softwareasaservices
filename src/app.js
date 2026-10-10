@@ -54,6 +54,7 @@ app.use(cookieParser())
 
 
 app.use('/api/auth',router);
+
 export {
     app,
 }

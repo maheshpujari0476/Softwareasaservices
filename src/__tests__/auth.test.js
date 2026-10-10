@@ -39,6 +39,8 @@ describe("Auth API - Login user",()=>{
     expect(response.body).toHaveProperty("login successfully");
   })
 })
+
+
 // afterAll(async () => {
 // await pool.end();
 // });

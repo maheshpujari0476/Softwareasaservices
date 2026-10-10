@@ -1,5 +1,6 @@
 // import express from "express";
 import dotenv from "dotenv";
+dotenv.config({ path: "./.env" });
 // import bodyParser from "body-parser";
 import colors from "colors";
 // import { router } from "../productiongradeauth/src/routes/userroute.js";
@@ -10,8 +11,6 @@ import { pool } from "./src/config/db.js";
 
 
 const port = process.env.PORT || 2000;
-
-
 
 pool.connect()
 .then(()=>{
@@ -25,5 +24,3 @@ app.listen(port, () => {
   console.error({error:error.mesage})
   console.error("DB connection failed")
 })
-
-
